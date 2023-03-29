@@ -6,7 +6,7 @@
 /*   By: vchan <vchan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 14:52:00 by vchan             #+#    #+#             */
-/*   Updated: 2023/03/29 15:40:47 by vchan            ###   ########.fr       */
+/*   Updated: 2023/03/29 16:25:01 by vchan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,9 @@ int	key_press_two(int key, t_data *data)
 		right_key(data);
 	else if (key == KEY_LEFT && data->game->step_of_game >= 3)
 		left_key(data);
+	// else if (key == ESP && data->game->step_of_game == 1)
+	// 	credit_of_game(data, data->game);
 	else if (key == ESP && data->game->step_of_game == 1)
-		credit_of_game(data, data->game);
-	else if (key == ESP && data->game->step_of_game == 2)
 		game_start(data);
 	else if (key == ESC)
 		free_all_and_exit(data);
