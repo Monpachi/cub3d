@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   raycasting.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vchan <vchan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/11 21:17:10 by dyoula            #+#    #+#             */
-/*   Updated: 2022/07/04 11:05:00 by emtran           ###   ########.fr       */
+/*   Created: 2023/03/29 15:45:27 by vchan             #+#    #+#             */
+/*   Updated: 2023/03/29 15:45:28 by vchan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,12 +33,12 @@ void	reset_values(t_player *p1, int x);
 void	step_manager(t_player *p1);
 void	jump_next_map_square(t_data *data, t_player *p1);
 void	check_side(t_player *p1);
-int		set_view_of_peppa(t_data *data, t_player *p1);
+int		set_view_of_kid(t_data *data, t_player *p1);
 
 /*				SET_VIEW.C				*/
 
-int		set_view_of_peppa(t_data *data, t_player *p1);
-int		set_view_of_peppa_suite(t_data *data, t_player *p1);
+int		set_view_of_kid(t_data *data, t_player *p1);
+int		set_view_of_kid_suite(t_data *data, t_player *p1);
 
 /*				SPRITES_MOVE.C			*/
 
@@ -48,7 +48,7 @@ int		sprites_move(t_data *data, int a, t_player *p1);
 
 /*				TEXTURES.C				*/
 
-char	*set_wall_direction(t_texture *text, t_player *peppa);
+char	*set_wall_direction(t_texture *text, t_player *kid);
 int		get_text_rgb(char *addr, t_data *data, int add, int y);
 int		display_wall(t_data *data, int x, int *y, int y2);
 int		rgb_to_hex_text(int red, int green, int blue);

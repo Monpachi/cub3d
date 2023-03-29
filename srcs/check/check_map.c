@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_map.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vchan <vchan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/23 10:40:37 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/13 18:11:25 by emtran           ###   ########.fr       */
+/*   Created: 2023/03/29 14:50:35 by vchan             #+#    #+#             */
+/*   Updated: 2023/03/29 15:42:13 by vchan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,7 +100,7 @@ int	check_map(t_data *data, t_map *map)
 	collect_map(data, map);
 	check_first_and_last_letters_of_line(data, map->map);
 	check_letters_of_map(data, map->map);
-	check_position_of_peppa(data, data->game->peppa, map->map);
+	check_position_of_kid(data, data->game->kid, map->map);
 	check_map_is_close(data, map->map);
 	return (0);
 }

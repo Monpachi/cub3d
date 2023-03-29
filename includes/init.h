@@ -5,10 +5,11 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: vchan <vchan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/24 13:36:15 by emtran            #+#    #+#             */
-/*   Updated: 2023/03/21 20:06:02 by vchan            ###   ########.fr       */
+/*   Created: 2023/03/29 15:44:58 by vchan             #+#    #+#             */
+/*   Updated: 2023/03/29 15:44:59 by vchan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #ifndef INIT_H
 # define INIT_H
@@ -76,6 +77,14 @@ typedef struct s_pic
 	int		height;
 }	t_pic;
 
+typedef struct s_kid
+{
+	int		check_kid;
+	char	pos_kid;
+	int		x_kid;
+	int		y_kid;
+}	t_kid;
+
 typedef struct s_texture
 {
 	t_img	*wall_no;
@@ -86,13 +95,6 @@ typedef struct s_texture
 	t_color	*celling;
 }	t_texture;
 
-typedef struct s_peppa
-{
-	int		check_peppa;
-	char	pos_peppa;
-	int		x_peppa;
-	int		y_peppa;
-}	t_peppa;
 
 typedef struct s_player
 {
@@ -141,7 +143,7 @@ typedef struct s_game
 	t_pic		*credit;
 	t_pic		*game_over;
 	t_texture	*texture;
-	t_peppa		*peppa;
+	t_kid		*kid;
 	t_player	*p1;
 	t_img		*screen;
 }	t_game;
@@ -238,7 +240,7 @@ void	init_struct_map(t_map *map);
 
 void	init_struct_malloc(t_data *data);
 void	init_data(t_data *data);
-void	init_struct_peppa(t_peppa *peppa);
+void	init_struct_kid(t_kid *kid);
 t_data	*init_struct(t_data *data);
 void	init_pic(t_pic *pic);
 void	init_color(t_color *color);

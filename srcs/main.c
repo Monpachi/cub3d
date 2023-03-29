@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: vchan <vchan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/21 19:05:39 by emtran            #+#    #+#             */
-/*   Updated: 2023/03/21 20:03:12 by vchan            ###   ########.fr       */
+/*   Created: 2023/03/29 14:54:00 by vchan             #+#    #+#             */
+/*   Updated: 2023/03/29 15:39:48 by vchan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,9 +56,9 @@ int	game_start(t_data *data)
 	mlx_get_data_addr(data->game->screen->mlx_img, &data->game->screen->bpp, \
 	&data->game->screen->line_len, &data->game->screen->endian);
 	init_val(data->game->p1);
-	data->game->p1->pos_x = data->game->peppa->x_peppa + 0.5;
-	data->game->p1->pos_y = data->game->peppa->y_peppa + 0.5;
-	set_view_of_peppa(data, data->game->p1);
+	data->game->p1->pos_x = data->game->kid->x_kid + 0.5;
+	data->game->p1->pos_y = data->game->kid->y_kid + 0.5;
+	set_view_of_kid(data, data->game->p1);
 	data->img->mlx_img = mlx_new_image(data->game->mlx_ptr, 450, 163);
 	data->img->addr = mlx_get_data_addr(data->img->mlx_img, &data->img->bpp, \
 	&data->img->line_len, &data->img->endian);

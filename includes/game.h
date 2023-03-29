@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: vchan <vchan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/09 15:27:15 by emtran            #+#    #+#             */
-/*   Updated: 2023/03/21 20:06:00 by vchan            ###   ########.fr       */
+/*   Created: 2023/03/29 15:44:43 by vchan             #+#    #+#             */
+/*   Updated: 2023/03/29 15:44:44 by vchan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,6 @@ int		game_start(t_data *data);
 
 void	introduction_of_game(t_data *data, t_game *game);
 void	credit_of_game(t_data *data, t_game *game);
-void	death_of_peppa_pig(t_data *data, t_game *game);
 
 /*          KEYS.C          */
 int		keys_main(int key_code, t_data *data);

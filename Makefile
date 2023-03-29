@@ -10,7 +10,7 @@ SRCS		= 	main.c \
 				check/check_file.c \
 				check/check_map.c \
 				check/check_order_in_file.c \
-				check/check_peppa.c \
+				check/check_kid.c \
 				check/check_rgb.c \
 				check/check_walls.c \
 				errors/print_error.c \
@@ -54,7 +54,6 @@ SRCS		= 	main.c \
 				utils/utils_split_charset.c \
 				utils/utils_str.c \
 				utils/utils_str2.c \
-				utils/utils_str3.c \
 				utils/utils_write.c \
 
 INCLUDES 	= 	includes/cub3D.h

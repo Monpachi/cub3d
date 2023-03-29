@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   draw.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vchan <vchan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/26 20:15:50 by dyoula            #+#    #+#             */
-/*   Updated: 2022/07/04 11:05:00 by emtran           ###   ########.fr       */
+/*   Created: 2023/03/29 14:53:38 by vchan             #+#    #+#             */
+/*   Updated: 2023/03/29 15:40:39 by vchan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,8 +54,8 @@ t_img	*verline(t_data *data, int x, int y1, int y2)
 	y = 0;
 	img = NULL;
 	assign_text_x(data->game->p1);
-	if (data->game->peppa->pos_peppa == 'N' || \
-	data->game->peppa->pos_peppa == 'E')
+	if (data->game->kid->pos_kid == 'N' || \
+	data->game->kid->pos_kid == 'E')
 		x = WINDOW_WIDTH - x - 1;
 	while (y < y1)
 	{

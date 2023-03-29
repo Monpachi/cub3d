@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: vchan <vchan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/12 19:46:44 by dyoula            #+#    #+#             */
-/*   Updated: 2023/03/21 19:53:39 by vchan            ###   ########.fr       */
+/*   Created: 2023/03/29 14:51:17 by vchan             #+#    #+#             */
+/*   Updated: 2023/03/29 15:24:32 by vchan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,8 @@ void	free_forest(t_data *data)
 int	free_parsing_failed(t_data *data)
 {
 	free_forest(data);
-	if (data->game->peppa)
-		free(data->game->peppa);
+	if (data->game->kid)
+		free(data->game->kid);
 	if (data->game->p1)
 		free(data->game->p1);
 	if (data->game->screen)

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: vchan <vchan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/13 11:46:47 by emtran            #+#    #+#             */
-/*   Updated: 2023/03/21 19:53:51 by vchan            ###   ########.fr       */
+/*   Created: 2023/03/29 14:51:31 by vchan             #+#    #+#             */
+/*   Updated: 2023/03/29 15:24:27 by vchan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,8 +64,8 @@ void	free_game_and_mlx(t_game *game)
 		mlx_destroy_display(game->mlx_ptr);
 		free(game->mlx_ptr);
 	}
-	if (game->peppa)
-		free(game->peppa);
+	if (game->kid)
+		free(game->kid);
 	if (game->p1)
 		free(game->p1);
 }

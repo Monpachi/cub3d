@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_structs2.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vchan <vchan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/13 13:51:21 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/03 19:46:41 by emtran           ###   ########.fr       */
+/*   Created: 2023/03/29 14:52:37 by vchan             #+#    #+#             */
+/*   Updated: 2023/03/29 15:18:39 by vchan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ void	init_pic(t_pic *pic)
 	pic->height = 0;
 }
 
-void	init_struct_peppa(t_peppa *peppa)
+void	init_struct_kid(t_kid *kid)
 {
-	peppa->check_peppa = 0;
-	peppa->x_peppa = 0;
-	peppa->y_peppa = 0;
+	kid->check_kid = 0;
+	kid->x_kid = 0;
+	kid->y_kid = 0;
 }
 
 void	init_color(t_color *color)

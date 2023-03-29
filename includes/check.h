@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vchan <vchan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/24 10:38:37 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/13 18:51:53 by emtran           ###   ########.fr       */
+/*   Created: 2023/03/29 15:44:17 by vchan             #+#    #+#             */
+/*   Updated: 2023/03/29 15:44:30 by vchan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,10 +46,10 @@ int		check_line_is_empty(char *line);
 int		check_one_delimiter_line_of_map(char *line);
 int		check_good_order_in_file(t_data *data, char **file);
 
-/*			CHECK_PEPPA.C				*/
+/*			CHECK_KID.C				*/
 
-int		check_peppa_is_not_in_void(t_data *data, t_peppa *peppa, char **map);
-int		check_position_of_peppa(t_data *data, t_peppa *peppa, char **map);
+int		check_kid_is_not_in_void(t_data *data, t_kid *kid, char **map);
+int		check_position_of_kid(t_data *data, t_kid *kid, char **map);
 int		zero_is_not_in_void(t_data *data, int y, int x, char **map);
 
 /*			CHECK_RGB.C				*/

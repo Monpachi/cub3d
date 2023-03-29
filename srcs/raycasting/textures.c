@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   textures.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vchan <vchan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/30 14:14:11 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/04 11:05:00 by emtran           ###   ########.fr       */
+/*   Created: 2023/03/29 14:53:54 by vchan             #+#    #+#             */
+/*   Updated: 2023/03/29 15:43:05 by vchan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,13 @@ int	rgb_to_hex_text(int red, int green, int blue)
 	return (color);
 }
 
-char	*set_wall_direction(t_texture *text, t_player *peppa)
+char	*set_wall_direction(t_texture *text, t_player *kid)
 {
-	if (peppa->side == NO)
+	if (kid->side == NO)
 		return (text->wall_no->addr);
-	else if (peppa->side == SO)
+	else if (kid->side == SO)
 		return (text->wall_so->addr);
-	else if (peppa->side == EA)
+	else if (kid->side == EA)
 		return (text->wall_ea->addr);
 	else
 		return (text->wall_we->addr);

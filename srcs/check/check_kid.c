@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_peppa.c                                      :+:      :+:    :+:   */
+/*   check_kid.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vchan <vchan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/30 10:42:03 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/13 16:34:55 by emtran           ###   ########.fr       */
+/*   Created: 2023/03/29 15:27:21 by vchan             #+#    #+#             */
+/*   Updated: 2023/03/29 15:42:25 by vchan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/cub3D.h"
 
-int	check_peppa_is_not_in_void(t_data *data, t_peppa *peppa, char **map)
+int	check_kid_is_not_in_void(t_data *data, t_kid *kid, char **map)
 {
-	if (!is_bin(map[peppa->y_peppa][peppa->x_peppa - 1]))
+	if (!is_bin(map[kid->y_kid][kid->x_kid - 1]))
 		print_error_pars_and_exit(ERR_MAP_CLOSE, data);
-	else if (!is_bin(map[peppa->y_peppa - 1][peppa->x_peppa]))
+	else if (!is_bin(map[kid->y_kid - 1][kid->x_kid]))
 		print_error_pars_and_exit(ERR_MAP_CLOSE, data);
-	else if (!is_bin(map[peppa->y_peppa][peppa->x_peppa + 1]))
+	else if (!is_bin(map[kid->y_kid][kid->x_kid + 1]))
 		print_error_pars_and_exit(ERR_MAP_CLOSE, data);
-	else if (!is_bin(map[peppa->y_peppa + 1][peppa->x_peppa]))
+	else if (!is_bin(map[kid->y_kid + 1][kid->x_kid]))
 		print_error_pars_and_exit(ERR_MAP_CLOSE, data);
 	return (0);
 }
@@ -38,7 +38,7 @@ int	zero_is_not_in_void(t_data *data, int y, int x, char **map)
 	return (0);
 }
 
-int	check_position_of_peppa(t_data *data, t_peppa *peppa, char **map)
+int	check_position_of_kid(t_data *data, t_kid *kid, char **map)
 {
 	int	y;
 	int	x;
@@ -51,17 +51,17 @@ int	check_position_of_peppa(t_data *data, t_peppa *peppa, char **map)
 		{
 			if (is_position(map[y][x]))
 			{
-				peppa->check_peppa++;
-				if (peppa->check_peppa > 1)
+				kid->check_kid++;
+				if (kid->check_kid > 1)
 					print_error_pars_and_exit(ERR_PEPPA_MUCH, data);
-				peppa->pos_peppa = map[y][x];
-				peppa->x_peppa = x;
-				peppa->y_peppa = y;
-				check_peppa_is_not_in_void(data, peppa, map);
+				kid->pos_kid = map[y][x];
+				kid->x_kid = x;
+				kid->y_kid = y;
+				check_kid_is_not_in_void(data, kid, map);
 			}
 		}
 	}
-	if (!peppa->check_peppa)
-		print_error_pars_and_exit(ERR_NO_PEPPA, data);
+	if (!kid->check_kid)
+		print_error_pars_and_exit(ERR_NO_KID, data);
 	return (0);
 }

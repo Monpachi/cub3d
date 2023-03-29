@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: vchan <vchan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/10 20:12:07 by dyoula            #+#    #+#             */
-/*   Updated: 2023/03/21 19:44:02 by vchan            ###   ########.fr       */
+/*   Created: 2023/03/29 14:52:04 by vchan             #+#    #+#             */
+/*   Updated: 2023/03/29 15:43:29 by vchan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,6 @@ void	a_key(t_data *data)
 		data->game->p1->pos_x = x1;
 	if (data->map->map[(int)y2][(int)x2] != '1')
 		data->game->p1->pos_y = y2;
-
 }
 
 void	d_key(t_data *data)
@@ -99,5 +98,4 @@ void	d_key(t_data *data)
 		data->game->p1->pos_x = x1;
 	if (data->map->map[(int)y2][(int)x2] != '1')
 		data->game->p1->pos_y = y2;
-
 }

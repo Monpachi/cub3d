@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_structs.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dyoula <dyoula@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vchan <vchan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/24 13:35:10 by emtran            #+#    #+#             */
-/*   Updated: 2022/07/12 20:34:14 by dyoula           ###   ########.fr       */
+/*   Created: 2023/03/29 14:52:34 by vchan             #+#    #+#             */
+/*   Updated: 2023/03/29 15:41:24 by vchan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ void	init_struct_malloc_game(t_data *data)
 	data->game->texture = malloc(sizeof(t_texture));
 	if (!data->game->texture)
 		print_error_and_exit(ERR_MALLOC, data);
-	data->game->peppa = malloc(sizeof(t_peppa));
-	if (!data->game->peppa)
+	data->game->kid = malloc(sizeof(t_kid));
+	if (!data->game->kid)
 		print_error_and_exit(ERR_MALLOC, data);
 	data->game->p1 = malloc(sizeof(t_player));
 	if (!data->game->p1)

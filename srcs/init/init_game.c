@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: vchan <vchan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/09 14:08:08 by emtran            #+#    #+#             */
-/*   Updated: 2023/03/21 20:14:12 by vchan            ###   ########.fr       */
+/*   Created: 2023/03/29 14:52:20 by vchan             #+#    #+#             */
+/*   Updated: 2023/03/29 15:41:56 by vchan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,5 +54,5 @@ void	init_struct_game(t_data *data, t_game *game)
 		print_error_and_exit(ERR_MALLOC, data);
 	init_pics(data, game);
 	init_texture(data, game->texture);
-	init_struct_peppa(game->peppa);
+	init_struct_kid(game->kid);
 }
