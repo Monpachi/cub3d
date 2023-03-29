@@ -6,14 +6,13 @@
 /*   By: vchan <vchan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 14:50:28 by vchan             #+#    #+#             */
-/*   Updated: 2023/03/29 15:42:17 by vchan            ###   ########.fr       */
+/*   Updated: 2023/03/29 16:17:22 by vchan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/cub3D.h"
 
-int	is_it_an_id_celling_floor_in_file(t_data *data, char **file, char *id, \
-int i)
+int	celling_floor_in_file(t_data *data, char **file, char *id, int i)
 {
 	if (!ft_strncmp(file[i], id, 1))
 	{
@@ -24,7 +23,7 @@ int i)
 	return (-1);
 }
 
-int	check_path_arg_color_is_good(t_data *data, char *line_file, char **split)
+int	check_path_arg_color(t_data *data, char *line_file, char **split)
 {
 	int	len;
 
@@ -44,7 +43,7 @@ char *type)
 
 	split = NULL;
 	split = ft_split_charset(line_file, SPACES);
-	check_path_arg_color_is_good(data, line_file, split);
+	check_path_arg_color(data, line_file, split);
 	if (!split[1] || split[2])
 	{
 		free_d_tab(split);
@@ -59,7 +58,7 @@ char *type)
 	return (0);
 }
 
-int	are_check_all_floor_celling_is_ok(t_data *data, t_floor *floor)
+int	check_all_floor_ceiling(t_data *data, t_floor *floor)
 {
 	if (!floor->check_floor || !floor->check_celling)
 		return (print_error_pars_and_exit(ERR_ID_FC_MISS, data));
@@ -73,13 +72,13 @@ int	check_celling_floor(t_data *data, char **file)
 	i = 0;
 	while (i < data->lines_file)
 	{
-		if (!is_it_an_id_celling_floor_in_file(data, file, "C", i))
+		if (!celling_floor_in_file(data, file, "C", i))
 			data->map->floor->check_floor = true;
-		else if (!is_it_an_id_celling_floor_in_file(data, file, "F", i))
+		else if (!celling_floor_in_file(data, file, "F", i))
 			data->map->floor->check_celling = true;
 		i++;
 	}
-	are_check_all_floor_celling_is_ok(data, data->map->floor);
+	check_all_floor_ceiling(data, data->map->floor);
 	collect_celling_floor(data, file);
 	return (0);
 }

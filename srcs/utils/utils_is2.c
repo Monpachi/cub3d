@@ -6,7 +6,7 @@
 /*   By: vchan <vchan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 15:49:30 by vchan             #+#    #+#             */
-/*   Updated: 2023/03/29 15:49:32 by vchan            ###   ########.fr       */
+/*   Updated: 2023/03/29 16:18:29 by vchan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int	has_str_only_walls(char *str)
 	return (1);
 }
 
-int	is_bin(char c)
+int	is_void(char c)
 {
 	int			a;
 	const char	*str = BIN;

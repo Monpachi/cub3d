@@ -6,7 +6,7 @@
 /*   By: vchan <vchan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 14:51:17 by vchan             #+#    #+#             */
-/*   Updated: 2023/03/29 15:24:32 by vchan            ###   ########.fr       */
+/*   Updated: 2023/03/29 16:16:13 by vchan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	check_parsing(char **argv, t_data *data)
 {
-	if (check_extension_cub(argv[1]))
+	if (is_cub(argv[1]))
 		return (print_error_pars_and_exit(ERR_CUB, data));
 	if (check_file(argv, data))
 		return (1);

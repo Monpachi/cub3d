@@ -6,13 +6,13 @@
 /*   By: vchan <vchan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 14:50:35 by vchan             #+#    #+#             */
-/*   Updated: 2023/03/29 15:42:13 by vchan            ###   ########.fr       */
+/*   Updated: 2023/03/29 16:21:44 by vchan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/cub3D.h"
 
-int	second_check_map_is_close(t_data *data, char **map)
+int	second_is_closed(t_data *data, char **map)
 {
 	int	y;
 
@@ -27,7 +27,7 @@ int	second_check_map_is_close(t_data *data, char **map)
 	return (0);
 }
 
-int	check_map_is_close(t_data *data, char **map)
+int	is_closed(t_data *data, char **map)
 {
 	int	x;
 	int	y;
@@ -47,11 +47,11 @@ int	check_map_is_close(t_data *data, char **map)
 			}
 		}
 	}
-	second_check_map_is_close(data, map);
+	second_is_closed(data, map);
 	return (0);
 }
 
-int	check_letters_of_map(t_data *data, char **map)
+int	check_alpha_in_map(t_data *data, char **map)
 {
 	int	y;
 	int	x;
@@ -67,7 +67,7 @@ int	check_letters_of_map(t_data *data, char **map)
 	return (0);
 }
 
-int	check_first_and_last_letters_of_line(t_data *data, char **map)
+int	first_and_last_line(t_data *data, char **map)
 {
 	int	y;
 	int	x;
@@ -98,9 +98,9 @@ int	check_first_and_last_letters_of_line(t_data *data, char **map)
 int	check_map(t_data *data, t_map *map)
 {
 	collect_map(data, map);
-	check_first_and_last_letters_of_line(data, map->map);
-	check_letters_of_map(data, map->map);
+	first_and_last_line(data, map->map);
+	check_alpha_in_map(data, map->map);
 	check_position_of_kid(data, data->game->kid, map->map);
-	check_map_is_close(data, map->map);
+	is_closed(data, map->map);
 	return (0);
 }

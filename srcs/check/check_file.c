@@ -6,7 +6,7 @@
 /*   By: vchan <vchan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 14:50:32 by vchan             #+#    #+#             */
-/*   Updated: 2023/03/29 15:42:10 by vchan            ###   ########.fr       */
+/*   Updated: 2023/03/29 16:16:13 by vchan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int	check_begin_extension(char *str)
 	return (a);
 }
 
-int	check_extension_cub(char *str)
+int	is_cub(char *str)
 {
 	int		a;
 	int		b;

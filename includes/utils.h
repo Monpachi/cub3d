@@ -6,7 +6,7 @@
 /*   By: vchan <vchan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 15:45:33 by vchan             #+#    #+#             */
-/*   Updated: 2023/03/29 15:45:35 by vchan            ###   ########.fr       */
+/*   Updated: 2023/03/29 16:18:42 by vchan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int					is_space(char c);
 int					is_digit(char c);
 int					has_str_only_spaces(char *str);
 int					has_str_only_walls(char *str);
-int					is_bin(char c);
+int					is_void(char c);
 
 /*			UTILS_MEM			*/
 

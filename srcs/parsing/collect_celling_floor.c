@@ -6,7 +6,7 @@
 /*   By: vchan <vchan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 14:53:06 by vchan             #+#    #+#             */
-/*   Updated: 2023/03/29 15:41:16 by vchan            ###   ########.fr       */
+/*   Updated: 2023/03/29 16:14:11 by vchan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ int	collect_celling_floor(t_data *data, char **file)
 	i = 0;
 	while (i < data->lines_file)
 	{
-		if (!is_it_an_id_celling_floor_in_file(data, file, "C", i))
+		if (!celling_floor_in_file(data, file, "C", i))
 			check_good_path_floor(data, data->game->texture->celling, \
 			file[i], "C");
-		else if (!is_it_an_id_celling_floor_in_file(data, file, "F", i))
+		else if (!celling_floor_in_file(data, file, "F", i))
 			check_good_path_floor(data, data->game->texture->floor, \
 			file[i], "F");
 		i++;
